@@ -4,6 +4,8 @@ jobs:
   chart-update:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
+    
     - id: ff
       uses: JakobGray/branch-fast-forward@main
       with:
