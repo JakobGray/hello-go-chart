@@ -4,14 +4,14 @@ jobs:
   chart-update:
     runs-on: ubuntu-latest
     env:
-      FF_BRANCH: release-2.4
-      MAIN_BRANCH: master
+      ff_branch: release-2.4
+      main_branch: master
     steps:
     - uses: actions/checkout@v2
       with:
-        ref: ${FF_BRANCH}
+        ref: ${{ env.ff_branch }}
 
     - name: Push
       run: |
-        git merge --ff-only ${MAIN_BRANCH}
+        git merge --ff-only ${{ env.main_branch }}
         git push
