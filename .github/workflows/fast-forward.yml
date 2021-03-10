@@ -3,15 +3,10 @@ on: workflow_dispatch
 jobs:
   chart-update:
     runs-on: ubuntu-latest
-    env:
-      ff_branch: release-2.4
-      main_branch: master
     steps:
-    - uses: actions/checkout@v2
+    - id: ff
+      uses: JakobGray/branch-fast-forward@main
       with:
-        ref: ${{ env.ff_branch }}
-
-    - name: Push
-      run: |
-        git merge --ff-only ${{ env.main_branch }}
-        git push
+        main_branch: 'master'
+        ff_branch: 'release-2.4'
+      
