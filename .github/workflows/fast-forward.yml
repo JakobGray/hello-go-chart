@@ -10,4 +10,6 @@ jobs:
         main_branch: 'master'
         ff_branch: 'release-2.4'
         push_token: 'FF_TOKEN'
-      
+      env:
+        FOO_TOKEN: ${{ secrets.FF_TOKEN }}
+        
