@@ -1,4 +1,4 @@
-name: Update Helm Charts
+name: Release FF
 on: workflow_dispatch
 jobs:
   chart-update:
@@ -9,4 +9,5 @@ jobs:
       with:
         main_branch: 'master'
         ff_branch: 'release-2.4'
+        push_token: 'FF_TOKEN'
       
