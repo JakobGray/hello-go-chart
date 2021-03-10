@@ -4,19 +4,8 @@ jobs:
   chart-update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Check if branch exists
-        id: branch_check
-        run: |
-          OUTPUT=$(git show-ref --verify --quiet refs/heads/release-2.5) &&
-          echo "::set-output name=OUTPUT::$OUTPUT"
-        
-      - name: Print on success
-        if: steps.branch_check.outputs.OUTPUT == 0
-        run: echo "Branch exists"
-
-
-      - name: Print on failure
-        if: steps.branch_check.outputs.OUTPUT == 1
-        run: echo "Branch does not exist"
+    - id: ff
+      uses: JakobGray/branch-fast-forward@main
+      with:
+        main_branch: 'main'
+        ff_branch: 'release-2.4'
