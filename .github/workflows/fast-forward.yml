@@ -7,5 +7,5 @@ jobs:
     - id: ff
       uses: JakobGray/branch-fast-forward@main
       with:
-        main_branch: 'main'
+        main_branch: 'master'
         ff_branch: 'release-2.4'
