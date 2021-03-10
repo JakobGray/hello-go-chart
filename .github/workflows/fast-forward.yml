@@ -1,0 +1,19 @@
+name: Update Helm Charts
+on: workflow_dispatch
+jobs:
+  chart-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check if branch exists
+        id: branch_check
+        run: git show-ref --verify --quiet refs/heads/release-2.5
+
+      - name: Check on success
+        if: steps.branch_check.outcome == 'success'
+        run: exit 0
+
+      - name: Check on failure
+        if: steps.branch_check.outcome == 'failure'
+        run: exit 1
