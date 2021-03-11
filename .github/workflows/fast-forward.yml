@@ -16,5 +16,4 @@ jobs:
         ff_branch: 'release-2.5'
         push_token: 'FF_TOKEN'
       env:
-        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         FF_TOKEN: ${{ secrets.FF_TOKEN }}
