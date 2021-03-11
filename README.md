@@ -1,3 +1,3 @@
 # hello-go-chart
 
-this is the default branch
+this is the master branch
