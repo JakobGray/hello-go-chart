@@ -11,5 +11,4 @@ jobs:
         ff_branch: 'release-2.4'
         push_token: 'FF_TOKEN'
       env:
-        FOO_TOKEN: ${{ secrets.FF_TOKEN }}
-        
+        FF_TOKEN: ${{ secrets.FF_TOKEN }}
