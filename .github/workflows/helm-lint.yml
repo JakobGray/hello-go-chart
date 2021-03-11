@@ -9,7 +9,7 @@ jobs:
   lint-chart:
     runs-on: ubuntu-latest
     env:
-      CHART_PATH: localhost:5000
+      CHART_PATH: hello-go
     steps:
       - uses: actions/checkout@v2
 
