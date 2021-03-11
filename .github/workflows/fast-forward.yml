@@ -3,7 +3,7 @@ name: Release FF
 on:
   push:
     branches:
-    - main
+    - master
 
 jobs:
   fast-forward:
