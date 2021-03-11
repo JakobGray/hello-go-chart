@@ -13,7 +13,7 @@ jobs:
       uses: JakobGray/branch-fast-forward@main
       with:
         main_branch: 'master'
-        ff_branch: 'release-2.4'
+        ff_branch: 'release-2.5'
         push_token: 'FF_TOKEN'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
