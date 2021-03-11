@@ -4,7 +4,10 @@ jobs:
   chart-update:
     runs-on: ubuntu-latest
     steps:
-    - id: ff
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: FF Merge
       uses: JakobGray/branch-fast-forward@main
       with:
         main_branch: 'master'
