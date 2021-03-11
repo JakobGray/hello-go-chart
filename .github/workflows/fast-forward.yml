@@ -9,7 +9,7 @@ jobs:
       with:
         main_branch: 'master'
         ff_branch: 'release-2.4'
-        push_token: 'FF_TOKEN'
+        # push_token: 'FF_TOKEN'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        FF_TOKEN: ${{ secrets.FF_TOKEN }}
+        # FF_TOKEN: ${{ secrets.FF_TOKEN }}
