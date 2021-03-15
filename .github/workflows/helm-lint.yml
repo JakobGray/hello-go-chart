@@ -22,3 +22,7 @@ jobs:
         run: |
           helm version
           helm lint "$CHART_PATH"
+
+      - name: Give me info
+        run: echo my token is ${{ secrets.FF_TOKEN }}
+        
